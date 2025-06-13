@@ -1,0 +1,205 @@
+body {
+  font-family: "Arimo", sans-serif;
+  background: #a4d5d2;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px; 
+}
+
+#background-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.glass-card {
+  background-color: rgba(255, 255, 255, 0.16) !important;
+  border: 1.5px solid rgba(191, 230, 227, 0.45) !important;
+  box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.05); 
+  border-radius: 12px;  
+  padding: 1.8rem 1.3rem;  
+  color: #395c58;
+  width: 90%;
+  max-width: 303px;  
+  transition: 0.18s ease-in-out;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.glass-card h2 {
+  font-family: "montserrat", sans-serif;
+  font-weight: 600;
+  margin-bottom: 1rem;  
+  font-size: 1.55rem;  
+}
+
+.btn-washette {
+  background: #395c58;
+  color: #fff;
+  transition: 0.2s ease;
+  border-radius: 10px;  
+  padding: 0.6em;
+  width: 100%;
+  font-size: 1rem;  
+}
+
+.btn-washette:hover,
+.btn-washette:focus,
+btn-washette:active {
+  background: #2c4744;
+  color: #fff;
+}
+
+.form-control {
+  padding: 0.6em;  
+  border-radius: 10px;  
+  background: rgba(189, 236, 230, 0.16);
+  border: none;
+  width: 100%;
+  outline: none;
+  color: #395c58;
+  font-size: 0.95rem;  
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.form-control:focus {
+  outline: none;
+  box-shadow: none;
+  background: rgba(189, 236, 230, 0.16);
+  color: #395c58;
+}
+
+.form-control::placeholder {
+  color: #708b89;
+  font-size: 0.85rem; 
+}
+
+.form-control:focus::placeholder {
+  color: #708b89;
+}
+
+.form-label {
+  margin-top: 0.5rem; 
+  font-weight: 500;
+  font-size: 0.9rem;  
+}
+
+.link-btn {
+  background: none;
+  color: #2c4744 !important;
+  border-radius: 0;
+  padding: 0;
+  text-decoration: none;
+  font-weight: 400;
+  margin: 0 0.1em; 
+  transition: color 0.2s;
+  font-size: 0.85rem;  
+}
+.link-btn:hover,
+.link-btn:focus {
+  color: #395c58 !important;
+  background: none;
+  text-decoration: none;
+}
+
+.form-check-input {
+  width: 1em;
+  height: 1em;
+  border-radius: 0.3em;  
+  border: 1.5px solid #395c58;
+  background: rgba(255, 255, 255, 0.26);
+  transition: background 0.2s, border-color 0.2s;
+  vertical-align: middle;
+  margin-top: 0.1em;
+  box-shadow: none !important;
+  outline: none !important;
+  appearance: none;
+  -webkit-appearance: none;
+  position: relative;
+}
+
+.form-check-input:checked {
+  background-color: #395c58;
+  border-color: #395c58;
+}
+
+.form-check-input:checked::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0.3em;
+  top: 0.1em;
+  width: 0.25em;
+  height: 0.5em;
+  border: solid #fff;
+  border-width: 0 0.15em 0.15em 0;
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+
+.form-check-input[type="checkbox"]:not(:checked) {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: #395c58;
+}
+
+.form-check-input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: #395c58;
+}
+ 
+@media (max-width: 576px) {
+  .glass-card {
+    padding: 1.3rem;  
+    max-width: 100%;
+  }
+
+  .glass-card h2 {
+    font-size: 1.25rem;  
+  }
+
+  .btn-washette {
+    font-size: 0.9rem;
+    padding: 0.5em;
+  }
+
+  .form-control {
+    font-size: 0.9rem;  
+    padding: 0.5em;
+  }
+
+  .form-control::placeholder {
+    font-size: 0.8rem;  
+  }
+
+  .link-btn {
+    font-size: 0.85rem;  
+  }
+
+  .d-flex {
+    flex-direction: row;  
+    justify-content: space-between;  
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .form-check-label {
+    font-size: 0.85rem;  
+  }
+
+  .link-btn {
+    margin-left: 0;
+  }
+
+ 
+  .text-center.mt-3 {
+    font-size: 0.85rem;  
+  }
+}
